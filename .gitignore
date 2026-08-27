@@ -1,0 +1,9 @@
+# Godot 4 cache (regenerated automatically, never commit)
+godot/.godot/
+
+# macOS
+.DS_Store
+
+# Python (art generation tool)
+__pycache__/
+*.pyc

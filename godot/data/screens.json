@@ -1,0 +1,2165 @@
+{
+ "version": 1,
+ "praise": [
+  "Мяу! Верно!",
+  "Да, молодец, капитан!",
+  "Точно в цель! Ус-пех!",
+  "Вот это глазастый!",
+  "Так держать, юнга!"
+ ],
+ "wrong": [
+  "Почти! Попробуй ещё.",
+  "Не-а, посмотри внимательнее.",
+  "Есть ещё варианты!"
+ ],
+ "screens": [
+  {
+   "id": "01_colors",
+   "num": 1,
+   "title": "Разноцветный пикник",
+   "topic": "Учим цвета",
+   "bg_color": "#8ecae6",
+   "sticker_color": "#f4a261",
+   "items": [
+    {
+     "id": "pomegranate",
+     "label": "Гранат",
+     "color": "#d94f45",
+     "tags": [
+      "red"
+     ]
+    },
+    {
+     "id": "bottle_mail",
+     "label": "Бутылка с письмом",
+     "color": "#2f7fd0",
+     "tags": [
+      "blue"
+     ]
+    },
+    {
+     "id": "banana",
+     "label": "Банан",
+     "color": "#f2c14e",
+     "tags": [
+      "yellow"
+     ]
+    },
+    {
+     "id": "watermelon",
+     "label": "Арбуз",
+     "color": "#3f9d55",
+     "tags": [
+      "green"
+     ]
+    },
+    {
+     "id": "pink_shell",
+     "label": "Розовая ракушка",
+     "color": "#ef8fb5",
+     "tags": [
+      "pink"
+     ]
+    },
+    {
+     "id": "coconut",
+     "label": "Кокос",
+     "color": "#8a6642",
+     "tags": [
+      "brown"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи красный предмет!",
+     "target_tags": [
+      "red"
+     ],
+     "hint": "Красный, как ягода граната."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи синий предмет!",
+     "target_tags": [
+      "blue"
+     ],
+     "hint": "В ней спрятано письмо."
+    },
+    {
+     "type": "tap",
+     "text": "Найди жёлтое!",
+     "target_tags": [
+      "yellow"
+     ],
+     "hint": "Его любит есть мартышка."
+    },
+    {
+     "type": "tap",
+     "text": "Где зелёный предмет?",
+     "target_tags": [
+      "green"
+     ],
+     "hint": "Снаружи зелёный, внутри красный."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи розовую ракушку!",
+     "target_tags": [
+      "pink"
+     ],
+     "hint": "Она нежного цвета, как цветок."
+    },
+    {
+     "type": "tap",
+     "text": "Найди коричневый предмет!",
+     "target_tags": [
+      "brown"
+     ],
+     "hint": "Он растёт на пальме."
+    }
+   ]
+  },
+  {
+   "id": "02_opposites",
+   "num": 2,
+   "title": "Всё наоборот. Часть 1",
+   "topic": "Учим противоположности",
+   "bg_color": "#cdb4db",
+   "sticker_color": "#9d4edd",
+   "items": [
+    {
+     "id": "anchor",
+     "label": "Якорь",
+     "color": "#5c677d",
+     "tags": [
+      "heavy"
+     ]
+    },
+    {
+     "id": "feather",
+     "label": "Пёрышко",
+     "color": "#ffe8d6",
+     "tags": [
+      "light"
+     ]
+    },
+    {
+     "id": "hot_cocoa",
+     "label": "Горячее какао",
+     "color": "#bc4749",
+     "tags": [
+      "hot"
+     ]
+    },
+    {
+     "id": "cold_compote",
+     "label": "Компот со льдом",
+     "color": "#4895ef",
+     "tags": [
+      "cold"
+     ]
+    },
+    {
+     "id": "big_ship",
+     "label": "Большой корабль",
+     "color": "#7f5539",
+     "tags": [
+      "big"
+     ]
+    },
+    {
+     "id": "small_boat",
+     "label": "Маленькая лодочка",
+     "color": "#dda15e",
+     "tags": [
+      "small"
+     ]
+    },
+    {
+     "id": "full_bag",
+     "label": "Полный мешок",
+     "color": "#e9c46a",
+     "tags": [
+      "full"
+     ]
+    },
+    {
+     "id": "empty_bag",
+     "label": "Пустой мешок",
+     "color": "#b7b7a4",
+     "tags": [
+      "empty"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи тяжёлое!",
+     "target_tags": [
+      "heavy"
+     ],
+     "hint": "Оно тянет корабль на дно."
+    },
+    {
+     "type": "tap",
+     "text": "Что холодное?",
+     "target_tags": [
+      "cold"
+     ],
+     "hint": "В нём плавают льдинки."
+    },
+    {
+     "type": "tap",
+     "text": "Найди маленькое!",
+     "target_tags": [
+      "small"
+     ],
+     "hint": "Помещается на ладошке."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи пустой мешок!",
+     "target_tags": [
+      "empty"
+     ],
+     "hint": "Внутри ничего нет."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи большой корабль!",
+     "target_tags": [
+      "big"
+     ],
+     "hint": "Он больше лодочки."
+    },
+    {
+     "type": "tap",
+     "text": "Что горячее?",
+     "target_tags": [
+      "hot"
+     ],
+     "hint": "Из него идёт пар."
+    },
+    {
+     "type": "tap",
+     "text": "Найди лёгкое!",
+     "target_tags": [
+      "light"
+     ],
+     "hint": "Оно летит по ветру."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи полный мешок!",
+     "target_tags": [
+      "full"
+     ],
+     "hint": "Внутри много сокровищ."
+    }
+   ]
+  },
+  {
+   "id": "02_opposites_2",
+   "num": 3,
+   "title": "Всё наоборот. Часть 2",
+   "topic": "Учим противоположности",
+   "bg_color": "#cdb4db",
+   "sticker_color": "#9d4edd",
+   "items": [
+    {
+     "id": "long_rope",
+     "label": "Длинная верёвка",
+     "color": "#a98467",
+     "tags": [
+      "long"
+     ]
+    },
+    {
+     "id": "short_pencil",
+     "label": "Короткий карандаш",
+     "color": "#ee964b",
+     "tags": [
+      "short"
+     ]
+    },
+    {
+     "id": "sweet_honey",
+     "label": "Сладкий мёд",
+     "color": "#ffb703",
+     "tags": [
+      "sweet"
+     ]
+    },
+    {
+     "id": "bitter_remedy",
+     "label": "Горькая микстура",
+     "color": "#6a994e",
+     "tags": [
+      "bitter"
+     ]
+    },
+    {
+     "id": "cracker",
+     "label": "Съедобный сухарик",
+     "color": "#d4a373",
+     "tags": [
+      "edible"
+     ]
+    },
+    {
+     "id": "cannonball",
+     "label": "Несъедобное ядро",
+     "color": "#495057",
+     "tags": [
+      "nonedible"
+     ]
+    },
+    {
+     "id": "soft_pillow",
+     "label": "Мягкая подушка",
+     "color": "#f8edeb",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "hard_nut",
+     "label": "Твёрдый орех",
+     "color": "#7f4f24",
+     "tags": [
+      "hard"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Что длинное?",
+     "target_tags": [
+      "long"
+     ],
+     "hint": "Ею привязывают лодку."
+    },
+    {
+     "type": "tap",
+     "text": "Найди сладкое!",
+     "target_tags": [
+      "sweet"
+     ],
+     "hint": "Его делают пчёлы."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи несъедобное!",
+     "target_tags": [
+      "nonedible"
+     ],
+     "hint": "Это стреляют из пушки."
+    },
+    {
+     "type": "tap",
+     "text": "Что мягкое?",
+     "target_tags": [
+      "soft"
+     ],
+     "hint": "На нём сладко спится."
+    },
+    {
+     "type": "tap",
+     "text": "Найди короткий карандаш!",
+     "target_tags": [
+      "short"
+     ],
+     "hint": "Он короче верёвки."
+    },
+    {
+     "type": "tap",
+     "text": "Что горькое?",
+     "target_tags": [
+      "bitter"
+     ],
+     "hint": "Лекарство пить невкусно."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи съедобное!",
+     "target_tags": [
+      "edible"
+     ],
+     "hint": "Это хрустит и его едят."
+    },
+    {
+     "type": "tap",
+     "text": "Что твёрдое?",
+     "target_tags": [
+      "hard"
+     ],
+     "hint": "Щёлкнуть сложно."
+    }
+   ]
+  },
+  {
+   "id": "03_shapes",
+   "num": 4,
+   "title": "Волшебные формы",
+   "topic": "Круг, квадрат, треугольник, прямоугольник, овал, ромб",
+   "bg_color": "#ffd6a5",
+   "sticker_color": "#fb8500",
+   "items": [
+    {
+     "id": "porthole",
+     "label": "Иллюминатор",
+     "color": "#4ea8de",
+     "tags": [
+      "circle"
+     ]
+    },
+    {
+     "id": "chest",
+     "label": "Сундук",
+     "color": "#9c6644",
+     "tags": [
+      "square"
+     ]
+    },
+    {
+     "id": "sail",
+     "label": "Парус",
+     "color": "#f8f9fa",
+     "tags": [
+      "triangle"
+     ]
+    },
+    {
+     "id": "gangway",
+     "label": "Трап",
+     "color": "#b08968",
+     "tags": [
+      "rectangle"
+     ]
+    },
+    {
+     "id": "parrot_egg",
+     "label": "Яйцо попугая",
+     "color": "#ede0d4",
+     "tags": [
+      "oval"
+     ]
+    },
+    {
+     "id": "candy",
+     "label": "Конфета",
+     "color": "#ff70a6",
+     "tags": [
+      "rhombus"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи круг!",
+     "target_tags": [
+      "circle"
+     ],
+     "hint": "Круглое окошко в борту корабля."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи квадратный сундук!",
+     "target_tags": [
+      "square"
+     ],
+     "hint": "Квадратный, в нём хранят сокровища."
+    },
+    {
+     "type": "tap",
+     "text": "Найди треугольник!",
+     "target_tags": [
+      "triangle"
+     ],
+     "hint": "Он ловит ветер."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи прямоугольный трап!",
+     "target_tags": [
+      "rectangle"
+     ],
+     "hint": "Прямоугольный, по нему поднимаются на корабль."
+    },
+    {
+     "type": "tap",
+     "text": "Где овал?",
+     "target_tags": [
+      "oval"
+     ],
+     "hint": "Из него скоро вылупится птенец."
+    },
+    {
+     "type": "tap",
+     "text": "Найди ромб!",
+     "target_tags": [
+      "rhombus"
+     ],
+     "hint": "Сладкая, в красивом фантике."
+    }
+   ]
+  },
+  {
+   "id": "04_day",
+   "num": 5,
+   "title": "День юнги",
+   "topic": "Наш весёлый день: от подъёма до сна",
+   "bg_color": "#a8dadc",
+   "sticker_color": "#118ab2",
+   "items": [
+    {
+     "id": "wake",
+     "label": "Подъём",
+     "color": "#ffd166"
+    },
+    {
+     "id": "exercise",
+     "label": "Зарядка",
+     "color": "#06d6a0"
+    },
+    {
+     "id": "washing",
+     "label": "Умывание",
+     "color": "#4cc9f0"
+    },
+    {
+     "id": "dressing",
+     "label": "Одевание",
+     "color": "#7b6ff0"
+    },
+    {
+     "id": "breakfast",
+     "label": "Завтрак",
+     "color": "#f4a261"
+    },
+    {
+     "id": "study",
+     "label": "Учёба",
+     "color": "#e76f51"
+    },
+    {
+     "id": "lunch",
+     "label": "Обед",
+     "color": "#f77f00"
+    },
+    {
+     "id": "nap",
+     "label": "Тихий час",
+     "color": "#9b8bb4"
+    },
+    {
+     "id": "games",
+     "label": "Игры на палубе",
+     "color": "#43aa8b"
+    },
+    {
+     "id": "supper",
+     "label": "Ужин",
+     "color": "#f28482"
+    },
+    {
+     "id": "bath",
+     "label": "Купание за бортом",
+     "color": "#00b4d8"
+    },
+    {
+     "id": "sleep",
+     "label": "Отбой",
+     "color": "#3d405b"
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №1? Покажи!",
+     "target_id": "wake",
+     "hint": "Утром звучит судовой колокол."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №2? Покажи!",
+     "target_id": "exercise",
+     "hint": "Сначала разомнём лапки — это первое!"
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №3? Покажи!",
+     "target_id": "washing",
+     "hint": "Брызги воды и мыльные пузыри."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №4? Покажи!",
+     "target_id": "dressing",
+     "hint": "Надеваем форменку юнги."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №5? Покажи!",
+     "target_id": "breakfast",
+     "hint": "Сытная утренняя каша."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №6? Покажи!",
+     "target_id": "study",
+     "hint": "Юнга учит морские карты."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №7? Покажи!",
+     "target_id": "lunch",
+     "hint": "Весёлый обед на палубе."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №8? Покажи!",
+     "target_id": "nap",
+     "hint": "Гамак и тихая колыбельная."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №9? Покажи!",
+     "target_id": "games",
+     "hint": "Игры с командой на палубе."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №10? Покажи!",
+     "target_id": "supper",
+     "hint": "Последний ужин перед сном."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №11? Покажи!",
+     "target_id": "bath",
+     "hint": "Плюх! Тёплая вода."
+    },
+    {
+     "type": "tap",
+     "text": "Что юнга делает по порядку №12? Покажи!",
+     "target_id": "sleep",
+     "hint": "Все котята уже зевают."
+    }
+   ],
+   "ordered": true
+  },
+  {
+   "id": "05_counting",
+   "num": 6,
+   "title": "Считаем сокровища. Часть 1",
+   "topic": "Считаем не скучаем",
+   "bg_color": "#ffe8c2",
+   "sticker_color": "#e9c46a",
+   "items": [
+    {
+     "id": "coin_1",
+     "label": "Монета",
+     "color": "#ffd60a",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_2",
+     "label": "Монета",
+     "color": "#ffd60a",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_3",
+     "label": "Монета",
+     "color": "#ffc300",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_4",
+     "label": "Монета",
+     "color": "#ffd60a",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_5",
+     "label": "Монета",
+     "color": "#ffc300",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_6",
+     "label": "Монета",
+     "color": "#ffd60a",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "coin_7",
+     "label": "Монета",
+     "color": "#ffc300",
+     "tags": [
+      "coins"
+     ]
+    },
+    {
+     "id": "star_1",
+     "label": "Морская звезда",
+     "color": "#f28482",
+     "tags": [
+      "stars"
+     ]
+    },
+    {
+     "id": "star_2",
+     "label": "Морская звезда",
+     "color": "#f4978e",
+     "tags": [
+      "stars"
+     ]
+    },
+    {
+     "id": "star_3",
+     "label": "Морская звезда",
+     "color": "#f28482",
+     "tags": [
+      "stars"
+     ]
+    },
+    {
+     "id": "star_4",
+     "label": "Морская звезда",
+     "color": "#f4978e",
+     "tags": [
+      "stars"
+     ]
+    },
+    {
+     "id": "star_5",
+     "label": "Морская звезда",
+     "color": "#f28482",
+     "tags": [
+      "stars"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "count",
+     "text": "Посчитай монеты — тапай каждую!",
+     "target_tags": [
+      "coins"
+     ],
+     "hint": "Жёлтые круглые блестяшки."
+    },
+    {
+     "type": "count",
+     "text": "Посчитай морских звёзд!",
+     "target_tags": [
+      "stars"
+     ],
+     "hint": "Розовые пятиногие красавицы."
+    }
+   ]
+  },
+  {
+   "id": "05_counting_2",
+   "num": 7,
+   "title": "Считаем сокровища. Часть 2",
+   "topic": "Считаем не скучаем",
+   "bg_color": "#ffe8c2",
+   "sticker_color": "#e9c46a",
+   "items": [
+    {
+     "id": "shell_1",
+     "label": "Ракушка",
+     "color": "#faedcd",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_2",
+     "label": "Ракушка",
+     "color": "#fefae0",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_3",
+     "label": "Ракушка",
+     "color": "#faedcd",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_4",
+     "label": "Ракушка",
+     "color": "#fefae0",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_5",
+     "label": "Ракушка",
+     "color": "#faedcd",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_6",
+     "label": "Ракушка",
+     "color": "#fefae0",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_7",
+     "label": "Ракушка",
+     "color": "#faedcd",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "shell_8",
+     "label": "Ракушка",
+     "color": "#fefae0",
+     "tags": [
+      "shells"
+     ]
+    },
+    {
+     "id": "barrel_1",
+     "label": "Бочонок",
+     "color": "#8a5a44",
+     "tags": [
+      "barrels"
+     ]
+    },
+    {
+     "id": "barrel_2",
+     "label": "Бочонок",
+     "color": "#9c6644",
+     "tags": [
+      "barrels"
+     ]
+    },
+    {
+     "id": "barrel_3",
+     "label": "Бочонок",
+     "color": "#8a5a44",
+     "tags": [
+      "barrels"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "count",
+     "text": "Сколько ракушек? Тапай по одной!",
+     "target_tags": [
+      "shells"
+     ],
+     "hint": "Белые, как пенны волны."
+    },
+    {
+     "type": "count",
+     "text": "Сколько бочонков на палубе?",
+     "target_tags": [
+      "barrels"
+     ],
+     "hint": "Коричневые, с обручами."
+    }
+   ]
+  },
+  {
+   "id": "05_counting_3",
+   "title": "Считаем сокровища. Часть 3",
+   "topic": "Цифры по порядку",
+   "bg_color": "#ffe8c2",
+   "sticker_color": "#e9c46a",
+   "items": [
+    {
+     "id": "compass_1",
+     "label": "Компас",
+     "color": "#2a9d8f",
+     "tags": [
+      "compass"
+     ]
+    },
+    {
+     "id": "bottle_1",
+     "label": "Бутылка",
+     "color": "#4cc9f0",
+     "tags": [
+      "bottles"
+     ]
+    },
+    {
+     "id": "bottle_2",
+     "label": "Бутылка",
+     "color": "#4cc9f0",
+     "tags": [
+      "bottles"
+     ]
+    },
+    {
+     "id": "fish_1",
+     "label": "Рыбка",
+     "color": "#f77f00",
+     "tags": [
+      "fishes"
+     ]
+    },
+    {
+     "id": "fish_2",
+     "label": "Рыбка",
+     "color": "#f77f00",
+     "tags": [
+      "fishes"
+     ]
+    },
+    {
+     "id": "fish_3",
+     "label": "Рыбка",
+     "color": "#f77f00",
+     "tags": [
+      "fishes"
+     ]
+    },
+    {
+     "id": "fish_4",
+     "label": "Рыбка",
+     "color": "#f77f00",
+     "tags": [
+      "fishes"
+     ]
+    },
+    {
+     "id": "pearl_1",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    },
+    {
+     "id": "pearl_2",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    },
+    {
+     "id": "pearl_3",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    },
+    {
+     "id": "pearl_4",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    },
+    {
+     "id": "pearl_5",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    },
+    {
+     "id": "pearl_6",
+     "label": "Жемчужина",
+     "color": "#f8f4e6",
+     "tags": [
+      "pearls"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "count",
+     "text": "Сколько компасов? Тапай компас!",
+     "target_tags": [
+      "compass"
+     ],
+     "hint": "Один круглый компас с красной стрелкой."
+    },
+    {
+     "type": "count",
+     "text": "Сколько бутылок с посланием?",
+     "target_tags": [
+      "bottles"
+     ],
+     "hint": "Прозрачные бутылки с пробкой."
+    },
+    {
+     "type": "count",
+     "text": "Посчитай рыбок — тапай каждую!",
+     "target_tags": [
+      "fishes"
+     ],
+     "hint": "Оранжевые рыбки с плавниками."
+    },
+    {
+     "type": "count",
+     "text": "Сколько жемчужин в сундуке?",
+     "target_tags": [
+      "pearls"
+     ],
+     "hint": "Белые блестящие жемчужинки."
+    }
+   ],
+   "num": 8
+  },
+  {
+   "id": "05_counting_4",
+   "title": "Считаем сокровища. Часть 4",
+   "topic": "Ближе к десятке",
+   "bg_color": "#ffe8c2",
+   "sticker_color": "#e9c46a",
+   "items": [
+    {
+     "id": "crab_1",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_2",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_3",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_4",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_5",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_6",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_7",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_8",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "crab_9",
+     "label": "Краб",
+     "color": "#e63946",
+     "tags": [
+      "crabs"
+     ]
+    },
+    {
+     "id": "coral_1",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_2",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_3",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_4",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_5",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_6",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_7",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_8",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_9",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    },
+    {
+     "id": "coral_10",
+     "label": "Коралл",
+     "color": "#f28482",
+     "tags": [
+      "corals"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "count",
+     "text": "Посчитай крабов — тапай каждого!",
+     "target_tags": [
+      "crabs"
+     ],
+     "hint": "Красные крабы с клешнями."
+    },
+    {
+     "type": "count",
+     "text": "Сколько кораллов? Тапай каждый!",
+     "target_tags": [
+      "corals"
+     ],
+     "hint": "Розовые веточки коралла."
+    }
+   ],
+   "num": 9
+  },
+  {
+   "id": "06_radio",
+   "num": 10,
+   "title": "Рация капитана",
+   "topic": "Цифры и звонки друзьям",
+   "bg_color": "#bde0fe",
+   "sticker_color": "#3a86ff",
+   "contacts": [
+    {
+     "num": 1,
+     "label": "Капитан Барсик"
+    },
+    {
+     "num": 2,
+     "label": "Матрос Мурзик"
+    },
+    {
+     "num": 3,
+     "label": "Юнга Пушок"
+    },
+    {
+     "num": 4,
+     "label": "Попугай Боцман"
+    },
+    {
+     "num": 5,
+     "label": "Краб Клешня"
+    },
+    {
+     "num": 6,
+     "label": "Медуза Зефирка"
+    },
+    {
+     "num": 7,
+     "label": "Кит Бублик"
+    },
+    {
+     "num": 8,
+     "label": "Дельфин Спарк"
+    },
+    {
+     "num": 9,
+     "label": "Осьминог Осип"
+    }
+   ],
+   "items": [],
+   "tasks": [
+    {
+     "type": "dial",
+     "text": "Позвони Пушку — набери его номер!",
+     "contact": 3,
+     "hint": "Пушок третий в списке слева."
+    },
+    {
+     "type": "dial",
+     "text": "Позвони попугаю Боцману!",
+     "contact": 4,
+     "hint": "Ищите четвёртую строку списка."
+    },
+    {
+     "type": "dial",
+     "text": "Позвони крабу Клешне!",
+     "contact": 5,
+     "hint": "Он пятый по счёту."
+    },
+    {
+     "type": "dial",
+     "text": "Позвони дельфину Спарку!",
+     "contact": 8,
+     "hint": "Восемь — два кружка друг на друге."
+    },
+    {
+     "type": "dial",
+     "text": "Позвони киту Бублику!",
+     "contact": 7,
+     "hint": "Семь — как флажок-галочка."
+    }
+   ]
+  },
+  {
+   "id": "07_emotions",
+   "num": 11,
+   "title": "Хвостик настроения",
+   "topic": "Знакомимся с эмоциями",
+   "bg_color": "#ffc8dd",
+   "sticker_color": "#ff5d8f",
+   "items": [
+    {
+     "id": "joy",
+     "label": "Радость",
+     "color": "#ffd166",
+     "tags": [
+      "joy"
+     ]
+    },
+    {
+     "id": "delight",
+     "label": "Восторг",
+     "color": "#fb8500",
+     "tags": [
+      "delight"
+     ]
+    },
+    {
+     "id": "surprise",
+     "label": "Удивление",
+     "color": "#90dbf4",
+     "tags": [
+      "surprise"
+     ]
+    },
+    {
+     "id": "fear",
+     "label": "Испуг",
+     "color": "#8d99ae",
+     "tags": [
+      "fear"
+     ]
+    },
+    {
+     "id": "sadness",
+     "label": "Грусть",
+     "color": "#778da9",
+     "tags": [
+      "sadness"
+     ]
+    },
+    {
+     "id": "offense",
+     "label": "Обида",
+     "color": "#cdb4db",
+     "tags": [
+      "offense"
+     ]
+    },
+    {
+     "id": "displeasure",
+     "label": "Недовольство",
+     "color": "#bc6c25",
+     "tags": [
+      "displeasure"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Кто нашёл клад? Покажи радость!",
+     "target_tags": [
+      "joy"
+     ],
+     "hint": "Улыбка до ушей."
+    },
+    {
+     "type": "tap",
+     "text": "Море было очень-очень чудесным! Найди восторг.",
+     "target_tags": [
+      "delight"
+     ],
+     "hint": "Радость в квадрате!"
+    },
+    {
+     "type": "tap",
+     "text": "Из-за волны выглянул огромный кит. Кто ахнул?",
+     "target_tags": [
+      "surprise"
+     ],
+     "hint": "Глаза стали большими-большими."
+    },
+    {
+     "type": "tap",
+     "text": "Грянул гром. Кто испугался?",
+     "target_tags": [
+      "fear"
+     ],
+     "hint": "Хвост распушился и дрожит."
+    },
+    {
+     "type": "tap",
+     "text": "Игрушка упала за борт. Кто загрустил?",
+     "target_tags": [
+      "sadness"
+     ],
+     "hint": "Ушки опустились вниз."
+    },
+    {
+     "type": "tap",
+     "text": "У котёнка забрали рыбку. Покажи обиду.",
+     "target_tags": [
+      "offense"
+     ],
+     "hint": "Губки надули и отвернулись."
+    },
+    {
+     "type": "tap",
+     "text": "Котёнку сказали ложиться спать. Кто недоволен?",
+     "target_tags": [
+      "displeasure"
+     ],
+     "hint": "Брови домиком, хвост трубой."
+    }
+   ]
+  },
+  {
+   "id": "08_transport",
+   "num": 12,
+   "title": "Транспорт города",
+   "topic": "Как мы ездим по городу",
+   "bg_color": "#caf0f8",
+   "sticker_color": "#0077b6",
+   "items": [
+    {
+     "id": "car",
+     "label": "Машина",
+     "color": "#e63946"
+    },
+    {
+     "id": "bus",
+     "label": "Автобус",
+     "color": "#f4a261"
+    },
+    {
+     "id": "tram",
+     "label": "Трамвай",
+     "color": "#2a9d8f"
+    },
+    {
+     "id": "train",
+     "label": "Поезд",
+     "color": "#457b9d"
+    },
+    {
+     "id": "bicycle",
+     "label": "Велосипед",
+     "color": "#e76f51"
+    },
+    {
+     "id": "scooter",
+     "label": "Самокат",
+     "color": "#6d597a"
+    },
+    {
+     "id": "airplane",
+     "label": "Самолёт",
+     "color": "#8ecae6"
+    },
+    {
+     "id": "helicopter",
+     "label": "Вертолёт",
+     "color": "#e07a5f"
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи машину!",
+     "target_id": "car",
+     "hint": "Ездит по улицам города."
+    },
+    {
+     "type": "tap",
+     "text": "Где автобус?",
+     "target_id": "bus",
+     "hint": "Везёт много пассажиров."
+    },
+    {
+     "type": "tap",
+     "text": "Найди трамвай!",
+     "target_id": "tram",
+     "hint": "Едет по рельсам по городу."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи поезд!",
+     "target_id": "train",
+     "hint": "Мчит по железной дороге."
+    },
+    {
+     "type": "tap",
+     "text": "Где велосипед?",
+     "target_id": "bicycle",
+     "hint": "Два колеса, крутишь педали."
+    },
+    {
+     "type": "tap",
+     "text": "Найди самокат!",
+     "target_id": "scooter",
+     "hint": "Отталкиваешься ножкой."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи самолёт!",
+     "target_id": "airplane",
+     "hint": "Летит в небе, везёт людей."
+    },
+    {
+     "type": "tap",
+     "text": "Где вертолёт?",
+     "target_id": "helicopter",
+     "hint": "Винт крутится наверху."
+    }
+   ]
+  },
+  {
+   "id": "09_concert",
+   "num": 13,
+   "title": "Весёлый оркестр",
+   "topic": "Русские народные инструменты",
+   "bg_color": "#e0aaff",
+   "sticker_color": "#7b2cbf",
+   "items": [
+    {
+     "id": "balalaika",
+     "label": "Балалайка",
+     "color": "#e76f51"
+    },
+    {
+     "id": "domra",
+     "label": "Домра",
+     "color": "#2a9d8f"
+    },
+    {
+     "id": "gusli",
+     "label": "Гусли",
+     "color": "#9c6644"
+    },
+    {
+     "id": "bayan",
+     "label": "Баян",
+     "color": "#d00000"
+    },
+    {
+     "id": "accordion",
+     "label": "Гармонь",
+     "color": "#f4a261"
+    },
+    {
+     "id": "rozhok",
+     "label": "Рожок",
+     "color": "#b08968"
+    },
+    {
+     "id": "svirel",
+     "label": "Свирель",
+     "color": "#6d597a"
+    },
+    {
+     "id": "spoons",
+     "label": "Ложки",
+     "color": "#b5838d"
+    },
+    {
+     "id": "rattle",
+     "label": "Трещотки",
+     "color": "#83c5be"
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи балалайку!",
+     "target_id": "balalaika",
+     "hint": "Треугольная, три струны."
+    },
+    {
+     "type": "tap",
+     "text": "Найди домру!",
+     "target_id": "domra",
+     "hint": "Круглая, как луна."
+    },
+    {
+     "type": "tap",
+     "text": "Где гусли?",
+     "target_id": "gusli",
+     "hint": "Доска со многими струнами."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи баян!",
+     "target_id": "bayan",
+     "hint": "Две клавиатуры и меха."
+    },
+    {
+     "type": "tap",
+     "text": "Найди гармонь!",
+     "target_id": "accordion",
+     "hint": "Растягиваешь меха — играет."
+    },
+    {
+     "type": "tap",
+     "text": "Где рожок?",
+     "target_id": "rozhok",
+     "hint": "Деревянная труба пастуха."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи свирель!",
+     "target_id": "svirel",
+     "hint": "Деревянная дудочка с дырочками."
+    },
+    {
+     "type": "tap",
+     "text": "Найди ложки!",
+     "target_id": "spoons",
+     "hint": "Ими стучат, как в барабан."
+    },
+    {
+     "type": "tap",
+     "text": "Где трещотки?",
+     "target_id": "rattle",
+     "hint": "Деревянные тарахтелки."
+    }
+   ]
+  },
+  {
+   "id": "10_spring",
+   "title": "Весна",
+   "topic": "Когда всё оживает",
+   "bg_color": "#d8f3dc",
+   "sticker_color": "#a7c957",
+   "items": [
+    {
+     "id": "sun",
+     "label": "Солнышко",
+     "color": "#f4d35e",
+     "tags": [
+      "spring"
+     ]
+    },
+    {
+     "id": "flower",
+     "label": "Цветочек",
+     "color": "#f77f00",
+     "tags": [
+      "spring"
+     ]
+    },
+    {
+     "id": "butterfly",
+     "label": "Бабочка",
+     "color": "#b56576",
+     "tags": [
+      "spring"
+     ]
+    },
+    {
+     "id": "rain",
+     "label": "Дождик",
+     "color": "#4cc9f0",
+     "tags": [
+      "spring"
+     ]
+    },
+    {
+     "id": "kitten",
+     "label": "Котик в плащике",
+     "color": "#faa275",
+     "tags": [
+      "spring"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Что светит и греет весной?",
+     "target_id": "sun",
+     "hint": "Жёлтое, с лучиками."
+    },
+    {
+     "type": "tap",
+     "text": "Что расцветает весной?",
+     "target_id": "flower",
+     "hint": "Разноцветное на стебельке."
+    },
+    {
+     "type": "tap",
+     "text": "Кто летает над цветами весной?",
+     "target_id": "butterfly",
+     "hint": "Разноцветная с крыльями."
+    },
+    {
+     "type": "tap",
+     "text": "Что капает из тучки весной?",
+     "target_id": "rain",
+     "hint": "Капельки воды."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи котика в весеннем плащике!",
+     "target_id": "kitten",
+     "hint": "Котик в лёгком дождевике."
+    }
+   ],
+   "num": 14
+  },
+  {
+   "id": "10_summer",
+   "title": "Лето",
+   "topic": "Время купаться и загорать",
+   "bg_color": "#caf0f8",
+   "sticker_color": "#f4a261",
+   "items": [
+    {
+     "id": "beach",
+     "label": "Пляжный мяч",
+     "color": "#e63946",
+     "tags": [
+      "summer"
+     ]
+    },
+    {
+     "id": "umbrella",
+     "label": "Зонтик от солнца",
+     "color": "#f4d35e",
+     "tags": [
+      "summer"
+     ]
+    },
+    {
+     "id": "icecream",
+     "label": "Мороженое",
+     "color": "#f28482",
+     "tags": [
+      "summer"
+     ]
+    },
+    {
+     "id": "coconutshake",
+     "label": "Напиток с трубочкой",
+     "color": "#b5838d",
+     "tags": [
+      "summer"
+     ]
+    },
+    {
+     "id": "kitten",
+     "label": "Котик в панамке",
+     "color": "#faa275",
+     "tags": [
+      "summer"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "С чем играют на пляже летом?",
+     "target_id": "beach",
+     "hint": "Красочный круглый мяч."
+    },
+    {
+     "type": "tap",
+     "text": "Что укрывает от солнца?",
+     "target_id": "umbrella",
+     "hint": "Зонтик на палочке."
+    },
+    {
+     "type": "tap",
+     "text": "Что вкусное едят летом?",
+     "target_id": "icecream",
+     "hint": "Холодное, в рожке."
+    },
+    {
+     "type": "tap",
+     "text": "Чем угощаются со льдом?",
+     "target_id": "coconutshake",
+     "hint": "Стакан с трубочкой."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи котика в летней панамке!",
+     "target_id": "kitten",
+     "hint": "Котик в шортах и кепке."
+    }
+   ],
+   "num": 15
+  },
+  {
+   "id": "10_autumn",
+   "title": "Осень",
+   "topic": "Листья падают с деревьев",
+   "bg_color": "#fde2e4",
+   "sticker_color": "#b08968",
+   "items": [
+    {
+     "id": "leaf",
+     "label": "Листок",
+     "color": "#e76f51",
+     "tags": [
+      "autumn"
+     ]
+    },
+    {
+     "id": "mushroom",
+     "label": "Грибок",
+     "color": "#e63946",
+     "tags": [
+      "autumn"
+     ]
+    },
+    {
+     "id": "pumpkin",
+     "label": "Тыква",
+     "color": "#fb8500",
+     "tags": [
+      "autumn"
+     ]
+    },
+    {
+     "id": "umbrella",
+     "label": "Зонтик",
+     "color": "#6d597a",
+     "tags": [
+      "autumn"
+     ]
+    },
+    {
+     "id": "kitten",
+     "label": "Котик в свитерке",
+     "color": "#faa275",
+     "tags": [
+      "autumn"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Что падает с деревьев осенью?",
+     "target_id": "leaf",
+     "hint": "Оранжевый кленовый лист."
+    },
+    {
+     "type": "tap",
+     "text": "Что растёт в лесу под ёлкой?",
+     "target_id": "mushroom",
+     "hint": "Красный с белыми точками."
+    },
+    {
+     "type": "tap",
+     "text": "Что прячут на праздник урожая?",
+     "target_id": "pumpkin",
+     "hint": "Большая оранжевая тыква."
+    },
+    {
+     "type": "tap",
+     "text": "Что берут от осеннего дождя?",
+     "target_id": "umbrella",
+     "hint": "Закрытый коричневый зонтик."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи котика в тёплом свитерке!",
+     "target_id": "kitten",
+     "hint": "Котик в свитере и шарфе."
+    }
+   ],
+   "num": 16
+  },
+  {
+   "id": "10_winter",
+   "title": "Зима",
+   "topic": "Холодно и снежно",
+   "bg_color": "#e0fbfc",
+   "sticker_color": "#457b9d",
+   "items": [
+    {
+     "id": "snowflake",
+     "label": "Снежинка",
+     "color": "#8ecae6",
+     "tags": [
+      "winter"
+     ]
+    },
+    {
+     "id": "snowman",
+     "label": "Снеговик",
+     "color": "#ffffff",
+     "tags": [
+      "winter"
+     ]
+    },
+    {
+     "id": "sled",
+     "label": "Санки",
+     "color": "#e63946",
+     "tags": [
+      "winter"
+     ]
+    },
+    {
+     "id": "scarf",
+     "label": "Шарф",
+     "color": "#d00000",
+     "tags": [
+      "winter"
+     ]
+    },
+    {
+     "id": "kitten",
+     "label": "Котик в шубке",
+     "color": "#faa275",
+     "tags": [
+      "winter"
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Что кружится в воздухе зимой?",
+     "target_id": "snowflake",
+     "hint": "Белая звёздочка льда."
+    },
+    {
+     "type": "tap",
+     "text": "Кого лепят из снега?",
+     "target_id": "snowman",
+     "hint": "Снежная баба с носом-морковкой."
+    },
+    {
+     "type": "tap",
+     "text": "На чём катаются с горки?",
+     "target_id": "sled",
+     "hint": "Деревянные санки."
+    },
+    {
+     "type": "tap",
+     "text": "Что греет шею зимой?",
+     "target_id": "scarf",
+     "hint": "Тёплый вязаный шарф."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи котика в зимней шубке!",
+     "target_id": "kitten",
+     "hint": "Котик в тёплой куртке и шапке."
+    }
+   ],
+   "num": 17
+  },
+  {
+   "id": "11_sport",
+   "num": 18,
+   "title": "Спорт — это здорово",
+   "topic": "Любимые виды спорта",
+   "bg_color": "#b9fbc0",
+   "sticker_color": "#38b000",
+   "items": [
+    {
+     "id": "football",
+     "label": "Футбол",
+     "color": "#43aa8b"
+    },
+    {
+     "id": "basketball",
+     "label": "Баскетбол",
+     "color": "#e76f51"
+    },
+    {
+     "id": "hockey",
+     "label": "Хоккей",
+     "color": "#457b9d"
+    },
+    {
+     "id": "tennis",
+     "label": "Теннис",
+     "color": "#e9c46a"
+    },
+    {
+     "id": "taekwondo",
+     "label": "Бокс",
+     "color": "#d00000"
+    },
+    {
+     "id": "swimming",
+     "label": "Плавание",
+     "color": "#4cc9f0"
+    },
+    {
+     "id": "running",
+     "label": "Бег",
+     "color": "#f77f00"
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Покажи футбол!",
+     "target_id": "football",
+     "hint": "Чёрно-белый мяч."
+    },
+    {
+     "type": "tap",
+     "text": "Найди баскетбол!",
+     "target_id": "basketball",
+     "hint": "Оранжевый мяч для корзины."
+    },
+    {
+     "type": "tap",
+     "text": "Где хоккей?",
+     "target_id": "hockey",
+     "hint": "Клюшка и шайба на льду."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи теннис!",
+     "target_id": "tennis",
+     "hint": "Ракетка и жёлтый мячик."
+    },
+    {
+     "type": "tap",
+     "text": "Найди бокс!",
+     "target_id": "taekwondo",
+     "hint": "Перчатки для ринга."
+    },
+    {
+     "type": "tap",
+     "text": "Где плавание?",
+     "target_id": "swimming",
+     "hint": "Бассейн с дорожками."
+    },
+    {
+     "type": "tap",
+     "text": "Покажи бег!",
+     "target_id": "running",
+     "hint": "Скоростной кроссовок."
+    }
+   ]
+  },
+  {
+   "id": "12_jobs",
+   "num": 19,
+   "title": "Кем стать коту?",
+   "topic": "Такие интересные профессии",
+   "bg_color": "#dbe7ff",
+   "sticker_color": "#3f37c9",
+   "items": [
+    {
+     "id": "vet",
+     "label": "Ветеринар",
+     "color": "#e63946",
+     "tags": []
+    },
+    {
+     "id": "magician",
+     "label": "Фокусник",
+     "color": "#7209b7",
+     "tags": []
+    },
+    {
+     "id": "confectioner",
+     "label": "Кондитер",
+     "color": "#dda15e",
+     "tags": []
+    },
+    {
+     "id": "gardener",
+     "label": "Садовник",
+     "color": "#52b788",
+     "tags": []
+    },
+    {
+     "id": "captain",
+     "label": "Капитан",
+     "color": "#1d3557",
+     "tags": []
+    },
+    {
+     "id": "lifeguard",
+     "label": "Спасатель",
+     "color": "#f4a261",
+     "tags": []
+    },
+    {
+     "id": "singer",
+     "label": "Певец",
+     "color": "#ff70a6",
+     "tags": []
+    },
+    {
+     "id": "astronaut",
+     "label": "Космонавт",
+     "color": "#4361ee",
+     "tags": []
+    }
+   ],
+   "tasks": [
+    {
+     "type": "tap",
+     "text": "Кто лечит больных зверят?",
+     "target_id": "vet",
+     "hint": "Доктор для котиков и собачек."
+    },
+    {
+     "type": "tap",
+     "text": "Кто показывает фокусы?",
+     "target_id": "magician",
+     "hint": "Достаёт кролика из пустой шляпы."
+    },
+    {
+     "type": "tap",
+     "text": "Кто печёт торты и пирожные?",
+     "target_id": "confectioner",
+     "hint": "Шапочка из крема ему к лицу."
+    },
+    {
+     "type": "tap",
+     "text": "Кто выращивает цветы и деревья?",
+     "target_id": "gardener",
+     "hint": "Лейка и лопатка — его инструменты."
+    },
+    {
+     "type": "tap",
+     "text": "Кто ведёт корабль через море?",
+     "target_id": "captain",
+     "hint": "Стоит у штурвала в белой форме."
+    },
+    {
+     "type": "tap",
+     "text": "Кто спасает тех, кто тонет?",
+     "target_id": "lifeguard",
+     "hint": "Дежурит на пляже со спасательным кругом."
+    },
+    {
+     "type": "tap",
+     "text": "Кто поёт песни на сцене?",
+     "target_id": "singer",
+     "hint": "Микрофон — его лучший друг."
+    },
+    {
+     "type": "tap",
+     "text": "Кто летает к звёздам на ракете?",
+     "target_id": "astronaut",
+     "hint": "Носит скафандр и шлем."
+    }
+   ]
+  }
+ ]
+}
