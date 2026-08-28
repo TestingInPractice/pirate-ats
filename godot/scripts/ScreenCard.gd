@@ -182,8 +182,19 @@ func _layout_items() -> void:
 		_layout_snake(n)
 		return
 
+	# Очень плотные экраны (предметов больше, чем слотов): «пиратский стол»
+	# не вмещает их без наложений, поэтому раскладываем по аккуратной сетке.
+	# Счётным экранам (как 05_counting_4: крабы/кораллы) сетка даже удобнее.
+	if n > ITEM_SLOTS.size():
+		_layout_grid(n)
+		return
+
 	var scales: Array[float] = [1.0, 0.92, 1.06]
 	var used := {}
+	# Зазор между кнопками, чтобы предметы не слипались.
+	var gap := 8.0
+	# Прямоугольники уже размещённых кнопок (с зазором) для проверки пересечений.
+	var placed: Array[Rect2] = []
 
 	# Целевая площадь: сумма кнопок >= 50% площади игрового поля.
 	var per_side := sqrt(maxf(0.5 * area.x * area.y / float(n), 64.0))
@@ -196,7 +207,8 @@ func _layout_items() -> void:
 		var si := int(floor(i * ITEM_SLOTS.size() / float(n)))
 		var reused := false
 		if used.size() >= ITEM_SLOTS.size():
-			# Слотов меньше, чем предметов: переиспользуем слоты с усиленным сдвигом.
+			# Слотов меньше, чем предметов: переиспользуем слоты, но уже с учётом
+			# проверки пересечений повторный предмет будет сдвинут в свободное место.
 			si = i % ITEM_SLOTS.size()
 			reused = true
 		else:
@@ -217,16 +229,69 @@ func _layout_items() -> void:
 		btn.set_meta("base_scale", Vector2.ONE)
 		btn.rotation_degrees = randf_range(-6.0, 6.0)
 
-		# Повторно занятый слот раздвигаем сильнее, чтобы кнопки не слипались.
+		# Повторно занятый слот раздвигаем сильнее, чтобы базовая точка не совпадала.
 		var spread := 2.2 if reused else 1.0
 		var center := Vector2(
-			slot.x * area.x + randf_range(-12.0, 12.0) * spread,
-			slot.y * area.y + randf_range(-18.0, 18.0) * spread
+			slot.x * area.x + randf_range(-10.0, 10.0) * spread,
+			slot.y * area.y + randf_range(-14.0, 14.0) * spread
 		)
-		var pos := center - btn_size / 2.0
-		pos.x = clampf(pos.x, 4.0, maxf(area.x - btn_size.x - 4.0, 4.0))
-		pos.y = clampf(pos.y, 4.0, maxf(area.y - btn_size.y - 4.0, 4.0))
-		btn.position = pos
+
+		# Ищем позицию без пересечений с уже размещёнными кнопками. От базовой
+		# точки уходим по спирали Ферма (равномерное заполнение) всё дальше по
+		# полю, пока не найдём свободное место или не кончатся попытки.
+		var attempts := 60
+		var search_radius := maxf(side * 2.0, area.x * 0.5)
+		var min_overlaps := 0x7fffffff
+		var best := (center - btn_size / 2.0).clamp(
+			Vector2(4.0, 4.0),
+			Vector2(maxf(area.x - btn_size.x - 4.0, 4.0), maxf(area.y - btn_size.y - 4.0, 4.0))
+		)
+		var free_found := false
+		for a in attempts:
+			var ang := a * (TAU * 0.61803398875)
+			var rad := search_radius * (float(a + 1) / float(attempts))
+			var cand := center + Vector2(cos(ang), sin(ang)) * rad
+			var pos := cand - btn_size / 2.0
+			pos.x = clampf(pos.x, 4.0, maxf(area.x - btn_size.x - 4.0, 4.0))
+			pos.y = clampf(pos.y, 4.0, maxf(area.y - btn_size.y - 4.0, 4.0))
+			var rect := Rect2(pos, btn_size).grow(gap)
+			var overlaps := 0
+			for pr: Rect2 in placed:
+				if pr.intersects(rect):
+					overlaps += 1
+			if overlaps == 0:
+				best = pos
+				free_found = true
+				break
+			if overlaps < min_overlaps:
+				min_overlaps = overlaps
+				best = pos
+		# Если спираль не нашла свободного места, проходимся по всему полю грубой
+		# сеткой и берём первую по-настоящему свободную ячейку. Для неплотных
+		# экранов (слотов хватает) такая ячейка гарантированно найдётся — так
+		# предметы никогда не ложатся друг на друга.
+		if not free_found:
+			var step := maxf(side * 0.08, 12.0)
+			var cy := 4.0
+			while cy < area.y - btn_size.y:
+				var cx := 4.0
+				while cx < area.x - btn_size.x:
+					var rect := Rect2(Vector2(cx, cy), btn_size).grow(gap)
+					var overlaps := 0
+					for pr: Rect2 in placed:
+						if pr.intersects(rect):
+							overlaps += 1
+							break
+					if overlaps == 0:
+						best = Vector2(cx, cy)
+						free_found = true
+						break
+					cx += step
+				if free_found:
+					break
+				cy += step
+		btn.position = best
+		placed.append(Rect2(best, btn_size).grow(gap))
 
 
 func _layout_snake(n: int) -> void:
@@ -260,6 +325,35 @@ func _layout_snake(n: int) -> void:
 		var pos := center - btn_size / 2.0
 		pos.x = clampf(pos.x, 4.0, maxf(area.x - btn_size.x - 4.0, 4.0))
 		pos.y = clampf(pos.y, 4.0, maxf(area.y - btn_size.y - 4.0, 4.0))
+		btn.position = pos
+
+
+func _layout_grid(n: int) -> void:
+	# Аккуратная сетка для плотных экранов: предметы не накладываются друг на друга.
+	# Число столбцов подбирается под ландшафт поля, ряды заполняются сверху вниз.
+	var area := _play_field.size
+	var cols := maxi(2, int(round(sqrt(float(n) * area.x / maxf(area.y, 1.0)))))
+	cols = mini(cols, n)
+	var rows := maxi(1, ceili(float(n) / float(cols)))
+	var side := minf(area.x / float(cols) * 0.9, area.y / float(rows) * 0.9)
+	side = maxf(side, 64.0)
+	for i in n:
+		var e: Dictionary = _item_buttons[i]
+		var btn: Button = e["btn"]
+		var col := i % cols
+		var row := int(floor(i / float(cols)))
+		var btn_size := Vector2(side, side)
+		btn.custom_minimum_size = Vector2.ZERO
+		btn.size = btn_size
+		btn.pivot_offset = btn_size / 2.0
+		btn.scale = Vector2.ONE
+		btn.set_meta("base_scale", Vector2.ONE)
+		btn.rotation_degrees = randf_range(-4.0, 4.0)
+		var center := Vector2(
+			(float(col) + 0.5) * (area.x / float(cols)),
+			(float(row) + 0.5) * (area.y / float(rows))
+		)
+		var pos := center - btn_size / 2.0
 		btn.position = pos
 
 
