@@ -33,6 +33,13 @@ var _item_buttons: Array = []  # [{ "data": Dictionary, "btn": Button }]
 var _keypad_buttons: Array = []
 var _play_field: Control
 
+# Раскладка предметов строится ровно один раз. Повторный вызов _layout_items()
+# снова раскидывает предметы случайно, поэтому при сжатии поля (длинная подсказка
+# или реплика после неверного ответа) их нельзя перекладывать — иначе они
+# «прыгают» и налезают друг на друга.
+var _laid_out := false
+var _laid_out_area := Vector2.ZERO
+
 var _bg: ColorRect
 var _title_label: Label
 var _stars_label: Label
@@ -165,8 +172,8 @@ func _build_items_ui() -> void:
 		_play_field.add_child(btn)
 		_item_buttons.append({"data": item, "btn": btn})
 
-	_play_field.resized.connect(_layout_items)
-	_layout_items.call_deferred()
+	_play_field.resized.connect(_on_play_field_resized)
+	_layout_once.call_deferred()
 
 
 func _layout_items() -> void:
@@ -221,6 +228,10 @@ func _layout_items() -> void:
 
 		var s: float = scales[i % scales.size()]
 		var side := per_side * s
+		# Зазор с запасом на поворот кнопки (±6°): повёрнутый квадрат выступает
+		# за свой осевой прямоугольник, поэтому сверяем пересечения по увеличенной
+		# рамке, чтобы предметы не налезали друг на друга.
+		var margin := gap + side * 0.12
 		var btn_size := Vector2(side, side)
 		btn.custom_minimum_size = Vector2.ZERO
 		btn.size = btn_size
@@ -254,7 +265,7 @@ func _layout_items() -> void:
 			var pos := cand - btn_size / 2.0
 			pos.x = clampf(pos.x, 4.0, maxf(area.x - btn_size.x - 4.0, 4.0))
 			pos.y = clampf(pos.y, 4.0, maxf(area.y - btn_size.y - 4.0, 4.0))
-			var rect := Rect2(pos, btn_size).grow(gap)
+			var rect := Rect2(pos, btn_size).grow(margin)
 			var overlaps := 0
 			for pr: Rect2 in placed:
 				if pr.intersects(rect):
@@ -276,7 +287,7 @@ func _layout_items() -> void:
 			while cy < area.y - btn_size.y:
 				var cx := 4.0
 				while cx < area.x - btn_size.x:
-					var rect := Rect2(Vector2(cx, cy), btn_size).grow(gap)
+					var rect := Rect2(Vector2(cx, cy), btn_size).grow(margin)
 					var overlaps := 0
 					for pr: Rect2 in placed:
 						if pr.intersects(rect):
@@ -291,7 +302,30 @@ func _layout_items() -> void:
 					break
 				cy += step
 		btn.position = best
-		placed.append(Rect2(best, btn_size).grow(gap))
+		placed.append(Rect2(best, btn_size).grow(margin))
+
+
+func _on_play_field_resized() -> void:
+	_layout_once()
+	if _laid_out:
+		# Длинные подсказки/реплики слегка сжимают поле по вертикали — предметы
+		# перекладывать нельзя (будут «прыгать» и налазить). Перераскладываемся
+		# только если поле реально выросло (например, развернули окно).
+		if _play_field != null \
+				and _play_field.size.x >= _laid_out_area.x \
+				and _play_field.size.y >= _laid_out_area.y:
+			_laid_out_area = _play_field.size
+			_layout_items()
+
+
+func _layout_once() -> void:
+	if _laid_out:
+		return
+	if _play_field == null or _play_field.size.x < 20 or _play_field.size.y < 20:
+		return
+	_laid_out = true
+	_laid_out_area = _play_field.size
+	_layout_items()
 
 
 func _layout_snake(n: int) -> void:
