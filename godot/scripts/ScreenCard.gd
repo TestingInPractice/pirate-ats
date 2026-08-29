@@ -48,6 +48,10 @@ var _task_cloud: PanelContainer
 var _task_label: Label
 var _center_box: VBoxContainer
 
+# Зарезервированная высота облачка задания (под ~3 строки текста 28px), чтобы
+# смена задания (1 строка <-> 3 строки) не толкала игровое поле вниз/вверх.
+var _card_cloud_reserve := 168
+
 
 func setup(screen: Dictionary, data: Dictionary) -> void:
 	_screen = screen
@@ -126,9 +130,13 @@ func _build_ui() -> void:
 	sb.content_margin_top = 8
 	sb.content_margin_bottom = 8
 	_task_cloud.add_theme_stylebox_override("panel", sb)
+	_card_cloud_reserve = 168
+	_task_cloud.custom_minimum_size = Vector2(0, _card_cloud_reserve)
 	cloud_wrap.add_child(_task_cloud)
 	_task_label = Label.new()
 	_task_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_task_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_task_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_task_label.add_theme_font_size_override("font_size", 28)
 	_task_label.add_theme_color_override("font_color", Color("#333333"))
 	_task_cloud.add_child(_task_label)
