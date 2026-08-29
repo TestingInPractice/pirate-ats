@@ -306,16 +306,11 @@ func _layout_items() -> void:
 
 
 func _on_play_field_resized() -> void:
+	# Раскладка предметов строится ровно один раз — при первом реальном размере
+	# поля. Дальше поле может «дышать» (текст задания разной длины сжимает/растягивает
+	# центр между задачами, после верного/неверного ответа), но перераскладывать
+	# предметы нельзя: они начнут «прыгать» по случайным позициям и налазить.
 	_layout_once()
-	if _laid_out:
-		# Длинные подсказки/реплики слегка сжимают поле по вертикали — предметы
-		# перекладывать нельзя (будут «прыгать» и налазить). Перераскладываемся
-		# только если поле реально выросло (например, развернули окно).
-		if _play_field != null \
-				and _play_field.size.x >= _laid_out_area.x \
-				and _play_field.size.y >= _laid_out_area.y:
-			_laid_out_area = _play_field.size
-			_layout_items()
 
 
 func _layout_once() -> void:
@@ -621,7 +616,6 @@ func _next_task() -> void:
 		for e: Dictionary in _item_buttons:
 			if _has_tag(e["data"], tag):
 				e["btn"].disabled = false
-				e["btn"].text = e["data"].get("label", "?")
 				_total += 1
 			else:
 				e["btn"].disabled = false
@@ -689,7 +683,10 @@ func _handle_count(item: Dictionary, btn: Button, task: Dictionary) -> void:
 			return
 		_found += 1
 		btn.disabled = true
-		btn.text = "%s ✔ (%d)" % [item.get("label", ""), _found]
+		# Не меняем btn.text — смена текста меняет размер повёрнутой кнопки вокруг
+		# старого pivot_offset, и объект «елозит». Прогресс и так виден в задании:
+		# «Найдено: N из M». Найденный предмет просто затемняем.
+		btn.modulate = Color(1, 1, 1, 0.55)
 		_set_task_text("%s\nНайдено: %d из %d" % [String(task.get("text", "")), _found, _total])
 		if _found >= _total:
 			_correct(btn)
