@@ -7,6 +7,9 @@ signal closed
 const CARD := preload("res://scenes/ScreenCard.tscn")
 const SND_SUCCESS := preload("res://assets/sounds/success.wav")
 const SND_FAIL := preload("res://assets/sounds/fail.wav")
+# Экран «Цветные лужицы» рисуется кодом; ссылаемся на скрипт через preload,
+# а не через class_name (в headless-запуске глобальный кэш классов пуст).
+const PUDDLE := preload("res://scripts/PuddleShape.gd")
 
 # Слоты «рассыпанной» раскладки предметов (доли ширины/высоты игрового поля).
 const ITEM_SLOTS: Array[Vector2] = [
@@ -412,6 +415,13 @@ func _make_item_button(item: Dictionary) -> Button:
 	btn.add_theme_stylebox_override("hover", sb)
 	btn.add_theme_stylebox_override("pressed", sb)
 
+	# Экран «Цветные лужицы» рисует лужицы кодом (PuddleShape) — артов нет,
+	# поэтому обычный фолбэк-текст не нужен.
+	if screen_id == "01_puddles":
+		_make_puddle_button(btn, item)
+		btn.pressed.connect(_on_item_pressed.bind(item, btn))
+		return btn
+
 	if has_art:
 		# Контейнер картинки занимает всю кнопку (кнопка фиксированного размера)
 		btn.clip_contents = true
@@ -513,6 +523,34 @@ func _make_item_button(item: Dictionary) -> Button:
 
 	btn.pressed.connect(_on_item_pressed.bind(item, btn))
 	return btn
+
+
+func _make_puddle_button(btn: Button, item: Dictionary) -> void:
+	# Лужица на всю кнопку (без прозрачного стиля — она сама цветная).
+	btn.clip_contents = true
+
+	var puddle: Control = PUDDLE.new()
+	puddle.call("setup", Color(String(item.get("color", "#cccccc"))), String(item.get("shape", "round")))
+	puddle.set_anchors_preset(Control.PRESET_FULL_RECT)
+	puddle.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	btn.add_child(puddle)
+
+	# Подпись снизу-по центру (как у картинок)
+	var label := Label.new()
+	label.text = item.get("label", "?")
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.anchor_left = 0.1
+	label.anchor_right = 0.9
+	label.anchor_top = 1.0
+	label.anchor_bottom = 1.0
+	label.offset_top = -34
+	label.offset_bottom = -6
+	label.add_theme_font_size_override("font_size", 20)
+	label.add_theme_color_override("font_color", Color("#1d3557"))
+	label.add_theme_color_override("font_outline_color", Color.WHITE)
+	label.add_theme_constant_override("outline_size", 6)
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	btn.add_child(label)
 
 
 func _build_radio_ui() -> void:
