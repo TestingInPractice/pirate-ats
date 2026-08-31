@@ -1,0 +1,15 @@
+# Godot
+.godot/
+*.import.bak
+
+# Web export output
+build/
+
+# FLUX2 generation sources (regenerable via tools/gen_*.py)
+assets/art/generated/
+
+# Local backup of pre-FLUX art (redundant with git history)
+assets/art/backup_pre_flux/
+
+# macOS
+.DS_Store
